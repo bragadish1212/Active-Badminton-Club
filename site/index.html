@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ABC Frankfurt | International badminton club</title>
+<meta name="description" content="ABC Frankfurt is the international badminton club in Frankfurt am Main. Halls and playing times, league teams, trial sessions and membership.">
+<link rel="icon" type="image/png" href="img/abc-logo.png">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>
+/* Set the language before the page draws, so it never flashes in the wrong language */
+(function(){var l=null;try{l=new URLSearchParams(location.search).get("lang");}catch(e){}
+if(l!=="de"&&l!=="en"){try{l=localStorage.getItem("abc-lang");}catch(e){}}
+if(l!=="de"&&l!=="en"){l=(navigator.language||"en").toLowerCase().indexOf("de")===0?"de":"en";}
+document.documentElement.setAttribute("data-lang",l);document.documentElement.lang=l;})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main"><span class="l-en">Skip to content</span><span class="l-de">Zum Inhalt springen</span></a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/abc-logo.png" alt="" width="54" height="54"><b>ABC Frankfurt</b><span>Active Badminton Club Frankfurt e.V.</span></a>
+    <div class="head-right">
+      <nav class="menu" aria-label="Main" data-aria-de="Hauptmenü">
+        <a href="#about"><span class="l-en">About</span><span class="l-de">Über uns</span></a>
+        <a href="#times"><span class="l-en">Halls &amp; times</span><span class="l-de">Hallen &amp; Zeiten</span></a>
+        <a href="#teams"><span class="l-en">Teams</span><span class="l-de">Mannschaften</span></a>
+        <a href="#join"><span class="l-en">Join</span><span class="l-de">Mitmachen</span></a>
+        <a href="#news"><span class="l-en">News</span><span class="l-de">Neuigkeiten</span></a>
+        <a href="#contact"><span class="l-en">Contact</span><span class="l-de">Kontakt</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language" data-aria-de="Sprache">
+        <button type="button" class="lang-btn" data-set="en" aria-pressed="true" lang="en">EN</button>
+        <button type="button" class="lang-btn" data-set="de" aria-pressed="false" lang="de">DE</button>
+      </div>
+      <a class="btn" href="#trial"><span class="l-en">Request a trial</span><span class="l-de">Probetraining</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <img src="img/hero-high-five.jpg" alt="Two ABC players high-fiving on court" data-alt-de="Zwei ABC-Spielerinnen klatschen sich auf dem Feld ab" width="1536" height="1024">
+  <div class="wrap">
+    <div class="tonight" id="tonight" hidden></div>
+    <h1><span class="l-en"><span>Play.</span><span>Connect.</span><span>Belong.</span></span><span class="l-de"><span>Spielen.</span><span>Verbinden.</span><span>Dazugehören.</span></span></h1>
+    <p><span class="l-en">The international badminton club in Frankfurt since 1999. Competitive play, league teams and a community from 18 countries.</span><span class="l-de">Der internationale Badmintonverein in Frankfurt seit 1999. Ehrgeiziges Spiel, Ligamannschaften und eine Gemeinschaft aus 18 Ländern.</span></p>
+    <div class="ctas">
+      <a class="btn" href="#trial"><span class="l-en">Request a trial session</span><span class="l-de">Probetraining anfragen</span></a>
+      <a class="btn line" href="#times"><span class="l-en">See halls and times</span><span class="l-de">Hallen und Zeiten ansehen</span></a>
+    </div>
+  </div>
+</section>
+
+<nav class="routes" aria-label="Quick links" data-aria-de="Schnellzugriff">
+  <div class="wrap">
+    <a href="#times"><small><span class="l-en">I’m a member</span><span class="l-de">Ich bin Mitglied</span></small><strong><span class="l-en">Halls, times and KURABU</span><span class="l-de">Hallen, Zeiten und KURABU</span></strong><span><span class="l-en">Where we play this week</span><span class="l-de">Wo wir diese Woche spielen</span></span></a>
+    <a href="#join"><small><span class="l-en">I want to join</span><span class="l-de">Ich möchte mitspielen</span></small><strong><span class="l-en">Start with a trial session</span><span class="l-de">Mit einem Probetraining starten</span></strong><span><span class="l-en">Who we look for, fees and FAQ</span><span class="l-de">Wen wir suchen, Beiträge und FAQ</span></span></a>
+    <a href="#open"><small><span class="l-en">I’m looking for tournaments</span><span class="l-de">Ich suche Turniere</span></small><strong>ABC Open</strong><span><span class="l-en">Our annual club tournament</span><span class="l-de">Unser jährliches Vereinsturnier</span></span></a>
+  </div>
+</nav>
+
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div>
+      <h2><span class="l-en">Frankfurt’s international badminton club</span><span class="l-de">Frankfurts internationaler Badmintonverein</span></h2>
+      <p class="lead"><span class="l-en">We’ve been playing badminton in Frankfurt for over 25 years. Today more than 60% of our members come from outside Germany, and three of our teams compete in the Hessian leagues.</span><span class="l-de">Wir spielen seit über 25 Jahren Badminton in Frankfurt. Heute kommen mehr als 60 % unserer Mitglieder aus dem Ausland, und drei unserer Mannschaften spielen in den hessischen Ligen.</span></p>
+      <div class="stats">
+        <div><strong>93+</strong><span><span class="l-en">Members</span><span class="l-de">Mitglieder</span></span></div>
+        <div><strong>18</strong><span><span class="l-en">Countries</span><span class="l-de">Länder</span></span></div>
+        <div><strong>60%+</strong><span><span class="l-en">International</span><span class="l-de">International</span></span></div>
+        <div><strong>5×</strong><span><span class="l-en">Play nights a week</span><span class="l-de">Spielabende pro Woche</span></span></div>
+        <div><strong>3</strong><span><span class="l-en">League teams</span><span class="l-de">Ligamannschaften</span></span></div>
+        <div><strong>1999</strong><span><span class="l-en">Founded</span><span class="l-de">Gegründet</span></span></div>
+      </div>
+    </div>
+    <div>
+      <figure><img src="img/club-event.jpg" alt="ABC members holding certificates after a club event" data-alt-de="ABC-Mitglieder mit Urkunden nach einer Vereinsveranstaltung" width="1024" height="768" loading="lazy"><figcaption><span class="l-en">Club event with certificates for every player.</span><span class="l-de">Vereinsevent mit Urkunden für alle.</span></figcaption></figure>
+      <div class="values">
+        <h3><span class="l-en">Open to people from all backgrounds</span><span class="l-de">Offen für Menschen jeder Herkunft</span></h3>
+        <p><span class="l-en">Frankfurt draws people from banking, IT, engineering and consulting from all over the world. Playing together bridges the distances between us. We keep spirits high and have fun playing the sport we love.</span><span class="l-de">Frankfurt zieht Menschen aus Banken, IT, Ingenieurwesen und Beratung aus aller Welt an. Gemeinsames Spielen überbrückt die Distanzen zwischen uns. Bei uns stehen gute Laune und der Spaß an unserem Sport im Mittelpunkt.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec board" id="times">
+  <div class="wrap">
+    <div class="board-intro">
+      <div>
+        <h2><span class="l-en">Halls and playing times</span><span class="l-de">Hallen und Trainingszeiten</span></h2>
+        <p><span class="l-en">Members can play up to five times a week outside school holidays. Some halls change between the winter and summer seasons.</span><span class="l-de">Mitglieder können außerhalb der Schulferien bis zu fünfmal pro Woche spielen. Einige Hallen wechseln zwischen Winter- und Sommersaison.</span></p>
+      </div>
+      <div class="toggle" role="group" aria-label="Season" data-aria-de="Saison">
+        <button type="button" data-season="winter" aria-pressed="true"><span class="l-en">Winter schedule</span><span class="l-de">Winterplan</span></button>
+        <button type="button" data-season="summer" aria-pressed="false"><span class="l-en">Summer schedule</span><span class="l-de">Sommerplan</span></button>
+      </div>
+    </div>
+    <ul class="fx">
+      <li data-when="all" data-days="1"><div><div class="day"><span class="l-en">Monday</span><span class="l-de">Montag</span></div><span class="season"><span class="l-en">All year</span><span class="l-de">Ganzjährig</span></span></div><div class="time">19:00–22:00</div>
+        <div class="hall"><strong>Astrid-Lindgren-Schule</strong><span>Ginnheim · Platenstraße 75, 60431 Frankfurt</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Platenstra%C3%9Fe+75,+60431+Frankfurt"><span class="l-en">Directions</span><span class="l-de">Route</span></a></div>
+        <div class="courts" data-courts="3"><div><b>3</b><small><span class="l-en">courts</span><span class="l-de">Felder</span></small></div></div></li>
+      <li data-when="winter" data-days="2"><div><div class="day"><span class="l-en">Tuesday</span><span class="l-de">Dienstag</span></div><span class="season w"><span class="l-en">Winter</span><span class="l-de">Winter</span></span></div><div class="time">19:00–22:00</div>
+        <div class="hall"><strong>Panoramaschule</strong><span>Nied · Werner-Bockelmann-Straße 3, 65934 Frankfurt</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Werner-Bockelmann-Stra%C3%9Fe+3,+65934+Frankfurt"><span class="l-en">Directions</span><span class="l-de">Route</span></a></div>
+        <div class="courts" data-courts="4"><div><b>4</b><small><span class="l-en">courts</span><span class="l-de">Felder</span></small></div></div></li>
+      <li data-when="summer" data-days="2"><div><div class="day"><span class="l-en">Tuesday</span><span class="l-de">Dienstag</span></div><span class="season s"><span class="l-en">Summer</span><span class="l-de">Sommer</span></span></div><div class="time">19:00–23:00</div>
+        <div class="hall"><strong>Viktoria-Luise-Schule</strong><span>Bockenheim · Leonardo-da-Vinci-Allee 11, 60486 Frankfurt</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Leonardo-da-Vinci-Allee+11,+60486+Frankfurt"><span class="l-en">Directions</span><span class="l-de">Route</span></a></div>
+        <div class="courts" data-courts="6"><div><b>6</b><small><span class="l-en">courts</span><span class="l-de">Felder</span></small></div></div></li>
+      <li data-when="winter" data-days="3"><div><div class="day"><span class="l-en">Wednesday</span><span class="l-de">Mittwoch</span></div><span class="season w"><span class="l-en">Winter</span><span class="l-de">Winter</span></span></div><div class="time">19:30–22:30</div>
+        <div class="hall"><strong>Georg-Büchner-Schule</strong><span>Bockenheim · Pfingstbrunnenstraße 15–19, 60486 Frankfurt</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Pfingstbrunnenstra%C3%9Fe+15,+60486+Frankfurt"><span class="l-en">Directions</span><span class="l-de">Route</span></a></div>
+        <div class="courts" data-courts="4"><div><b>4</b><small><span class="l-en">courts</span><span class="l-de">Felder</span></small></div></div></li>
+      <li data-when="summer" data-days="3"><div><div class="day"><span class="l-en">Wednesday</span><span class="l-de">Mittwoch</span></div><span class="season s"><span class="l-en">Summer</span><span class="l-de">Sommer</span></span></div><div class="time">19:00–22:00</div>
+        <div class="hall"><strong>Valentin-Senger-Schule</strong><span>Bornheim · Valentin-Senger-Straße 9, 60389 Frankfurt</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Valentin-Senger-Stra%C3%9Fe+9,+60389+Frankfurt"><span class="l-en">Directions</span><span class="l-de">Route</span></a></div>
+        <div class="courts" data-courts="8"><div><b>8</b><small><span class="l-en">courts</span><span class="l-de">Felder</span></small></div></div></li>
+      <li data-when="all" data-days="6,0"><div><div class="day"><span class="l-en">Sat &amp; Sun</span><span class="l-de">Sa &amp; So</span></div><span class="season"><span class="l-en">All year</span><span class="l-de">Ganzjährig</span></span></div><div class="time">12:00–18:00</div>
+        <div class="hall"><strong>Dahlmannschule</strong><span>Bornheim/Ostend · Luxemburgerallee 24, 60385 Frankfurt</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Luxemburgerallee+24,+60385+Frankfurt"><span class="l-en">Directions</span><span class="l-de">Route</span></a></div>
+        <div class="courts" data-courts="6"><div><b>6</b><small><span class="l-en">courts</span><span class="l-de">Felder</span></small></div></div></li>
+    </ul>
+    <div class="kurabu"><p><span class="l-en">Schedule changes and holiday times are published only on KURABU, in Events and Calendar. Members sign in with their club login.</span><span class="l-de">Planänderungen und Ferienzeiten veröffentlichen wir nur in KURABU unter Events und Kalender. Mitglieder melden sich mit ihrem Vereinslogin an.</span></p><a class="btn" href="https://abc-frankfurt.kurabu.com/"><span class="l-en">Open KURABU</span><span class="l-de">KURABU öffnen</span></a></div>
+  </div>
+</section>
+
+<section class="sec" id="teams">
+  <div class="wrap">
+    <h2><span class="l-en">Teams and leagues</span><span class="l-de">Mannschaften und Ligen</span></h2>
+    <div class="teams">
+      <article class="team"><div class="no"><span class="l-en">Team 1</span><span class="l-de">1. Mannschaft</span></div><p class="league">Verbandsliga Süd</p>
+        <p><span class="l-en">Well established in the Verbandsliga after a run of successful seasons. Expect intense match-ups.</span><span class="l-de">Nach mehreren erfolgreichen Spielzeiten fest in der Verbandsliga etabliert. Es warten spannende Duelle.</span></p>
+        <a class="link" href="https://hbv-badminton.liga.nu/cgi-bin/WebObjects/nuLigaBADDE.woa/wa/groupPage?championship=HBV+26%2F27&amp;group=40362"><span class="l-en">Table and fixtures on nuLiga</span><span class="l-de">Tabelle und Spielplan auf nuLiga</span></a></article>
+      <article class="team"><div class="no"><span class="l-en">Team 2</span><span class="l-de">2. Mannschaft</span></div><p class="league">Bezirksoberliga 1 Frankfurt</p>
+        <p><span class="l-en">Up three levels in four years, from Bezirksliga A to Bezirksoberliga, and pushing for a top spot.</span><span class="l-de">In vier Jahren drei Ligen aufgestiegen, von der Bezirksliga A in die Bezirksoberliga, und auf dem Weg nach oben.</span></p>
+        <a class="link" href="https://hbv-badminton.liga.nu/cgi-bin/WebObjects/nuLigaBADDE.woa/wa/groupPage?championship=Frankfurt+26%2F27&amp;group=40355"><span class="l-en">Table and fixtures on nuLiga</span><span class="l-de">Tabelle und Spielplan auf nuLiga</span></a></article>
+      <article class="team"><div class="no"><span class="l-en">Team 3</span><span class="l-de">3. Mannschaft</span></div><p class="league">Bezirksoberliga 2 Frankfurt</p>
+        <p><span class="l-en">Launched in 2023 and ploughed through the lower leagues to catch up with Team 2.</span><span class="l-de">2023 gegründet und durch die unteren Ligen direkt zur 2. Mannschaft aufgeschlossen.</span></p>
+        <a class="link" href="https://hbv-badminton.liga.nu/cgi-bin/WebObjects/nuLigaBADDE.woa/wa/groupPage?championship=Frankfurt+26%2F27&amp;group=40356"><span class="l-en">Table and fixtures on nuLiga</span><span class="l-de">Tabelle und Spielplan auf nuLiga</span></a></article>
+    </div>
+    <div class="recruit"><p><span class="l-en">Want to play league matches? We’re looking for experienced players, especially women, to strengthen our teams.</span><span class="l-de">Lust auf Ligaspiele? Wir suchen erfahrene Spielerinnen und Spieler, besonders Frauen, für unsere Mannschaften.</span></p><a class="btn navy" href="mailto:info@abc-frankfurt.de?subject=League%20teams"><span class="l-en">Contact our sporting director</span><span class="l-de">Sportliche Leitung kontaktieren</span></a></div>
+  </div>
+</section>
+
+<section class="duo" id="open">
+  <div class="coach">
+    <h2><span class="l-en">Improve your game</span><span class="l-de">Besser werden</span></h2>
+    <p><span class="l-en">Our coach Fuat holds an A-class coaching licence and runs a coached session once a week, usually on Wednesdays.</span><span class="l-de">Unser Trainer Fuat hat eine A-Lizenz und leitet einmal pro Woche ein Training, meistens mittwochs.</span></p>
+    <p><span class="l-en">Members sign up for coached sessions through KURABU.</span><span class="l-de">Mitglieder melden sich über KURABU zum Training an.</span></p>
+  </div>
+  <div class="open">
+    <svg class="shuttle" viewBox="0 0 100 110" aria-hidden="true"><path d="M30 64 16 6h68L70 64z" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/><path d="M40 62 36 8M60 62l4-54M50 62V6" stroke="#fff" stroke-width="3"/><circle cx="50" cy="82" r="20" fill="#fff"/></svg>
+    <h2>ABC Open</h2>
+    <div class="cd" id="open-count" data-start="2027-06-12" data-end="2027-06-13">
+      <p class="cd-line" id="cd-line"><span class="l-en">Next ABC Open: 12–13 June 2027</span><span class="l-de">Nächstes ABC Open: 12.–13. Juni 2027</span></p>
+      <p class="cd-date" id="cd-date"><span class="l-en">Saturday 12 and Sunday 13 June 2027, dates to be confirmed</span><span class="l-de">Samstag, 12., und Sonntag, 13. Juni 2027, Termin noch nicht bestätigt</span></p>
+    </div>
+    <p><span class="l-en">Our club tournament. In 2026 we welcomed players from 28 countries. Draws and registration are on the tournament website.</span><span class="l-de">Unser Vereinsturnier. 2026 waren Spielerinnen und Spieler aus 28 Ländern dabei. Auslosung und Anmeldung findest du auf der Turnierwebsite.</span></p>
+    <a class="btn navy" href="http://abc-open.de/"><span class="l-en">Visit abc-open.de</span><span class="l-de">Zu abc-open.de</span></a>
+  </div>
+</section>
+
+<section class="sec" id="join">
+  <div class="wrap">
+    <div class="join-head">
+      <div>
+        <h2><span class="l-en">Join ABC</span><span class="l-de">Mitglied werden</span></h2>
+        <p class="lead"><span class="l-en">New players start with a couple of trial sessions. You see the level and atmosphere, and we see whether we can offer what you’re looking for.</span><span class="l-de">Neue Spielerinnen und Spieler starten mit ein paar Probetrainings. Du lernst Niveau und Atmosphäre kennen, und wir sehen, ob wir dir bieten können, was du suchst.</span></p>
+        <a class="btn navy" href="#trial"><span class="l-en">Request a trial session</span><span class="l-de">Probetraining anfragen</span></a>
+      </div>
+      <aside class="fit">
+        <h3><span class="l-en">Is ABC right for you?</span><span class="l-de">Passt ABC zu dir?</span></h3>
+        <ul>
+          <li><span class="l-en">You have solid badminton experience or play at an advanced level.</span><span class="l-de">Du hast solide Badminton-Erfahrung oder spielst auf fortgeschrittenem Niveau.</span></li>
+          <li><span class="l-en">We give women players priority for trial sessions.</span><span class="l-de">Spielerinnen bekommen bei Probetrainings Vorrang.</span></li>
+          <li><span class="l-en">If you’re a beginner, we’re probably not the right club for you yet.</span><span class="l-de">Für Anfängerinnen und Anfänger sind wir wahrscheinlich noch nicht der richtige Verein.</span></li>
+        </ul>
+      </aside>
+    </div>
+
+    <ol class="steps" aria-label="How to join" data-aria-de="So wirst du Mitglied">
+      <li><strong><span class="l-en">Read this section</span><span class="l-de">Diesen Abschnitt lesen</span></strong><span><span class="l-en">Check the level, times and fees.</span><span class="l-de">Niveau, Zeiten und Beiträge prüfen.</span></span></li>
+      <li><strong><span class="l-en">Send a request</span><span class="l-de">Anfrage senden</span></strong><span><span class="l-en">Tell us about your experience, leagues and tournaments.</span><span class="l-de">Erzähl uns von deiner Erfahrung, Ligen und Turnieren.</span></span></li>
+      <li><strong><span class="l-en">Attend trial sessions</span><span class="l-de">Probetrainings besuchen</span></strong><span><span class="l-en">Play a couple of club nights.</span><span class="l-de">Ein paar Vereinsabende mitspielen.</span></span></li>
+      <li><strong><span class="l-en">Talk it through</span><span class="l-de">Kurzes Gespräch</span></strong><span><span class="l-en">A short chat on whether we’re a good fit.</span><span class="l-de">Wir besprechen, ob wir zusammenpassen.</span></span></li>
+      <li><strong><span class="l-en">Send the form</span><span class="l-de">Formular senden</span></strong><span><span class="l-en">We send you the online membership form.</span><span class="l-de">Wir schicken dir den Online-Mitgliedsantrag.</span></span></li>
+    </ol>
+
+    <div class="fees">
+      <div>
+        <h3><span class="l-en">Membership fees</span><span class="l-de">Mitgliedsbeiträge</span></h3>
+        <table class="price">
+          <tr><th scope="row"><span class="l-en">Full membership</span><span class="l-de">Vollmitgliedschaft</span><span><span class="l-en">168 EUR per half-year by SEPA direct debit</span><span class="l-de">168 EUR pro Halbjahr per SEPA-Lastschrift</span></span></th><td><span class="l-en">28 EUR / month</span><span class="l-de">28 EUR / Monat</span></td></tr>
+          <tr><th scope="row"><span class="l-en">Students</span><span class="l-de">Studierende</span></th><td><span class="l-en">20 EUR / month</span><span class="l-de">20 EUR / Monat</span></td></tr>
+          <tr><th scope="row"><span class="l-en">Short-term</span><span class="l-de">Kurzzeitmitgliedschaft</span><span><span class="l-en">One month, paid in cash when you join</span><span class="l-de">Ein Monat, bar bei Eintritt zu zahlen</span></span></th><td>40 EUR</td></tr>
+          <tr><th scope="row"><span class="l-en">Admin fee</span><span class="l-de">Aufnahmegebühr</span><span><span class="l-en">Once, when you join</span><span class="l-de">Einmalig bei Eintritt</span></span></th><td>15 EUR</td></tr>
+        </table>
+        <ul class="incl">
+          <li><span class="l-en">Play up to five times a week</span><span class="l-de">Bis zu fünfmal pro Woche spielen</span></li>
+          <li><span class="l-en">Shuttles included</span><span class="l-de">Bälle inklusive</span></li>
+          <li><span class="l-en">Cancel with one month’s notice before 30 June or 31 December</span><span class="l-de">Kündigung mit einem Monat Frist zum 30. Juni oder 31. Dezember</span></li>
+        </ul>
+      </div>
+      <div class="faq">
+        <h3><span class="l-en">Questions</span><span class="l-de">Fragen</span></h3>
+        <details><summary><span class="l-en">When can I join the club?</span><span class="l-de">Wann kann ich Mitglied werden?</span></summary><p><span class="l-en">Only after attending trial sessions. If we agree we’re a good fit, we send you everything you need to join.</span><span class="l-de">Erst nach deinen Probetrainings. Wenn wir gut zusammenpassen, schicken wir dir alles, was du zum Eintritt brauchst.</span></p></details>
+        <details><summary><span class="l-en">How do I pay my fees?</span><span class="l-de">Wie zahle ich meine Beiträge?</span></summary><p><span class="l-en">We collect fees by SEPA direct debit at the start of each half-year, in January and July. For full members that’s 168 EUR per half-year.</span><span class="l-de">Wir ziehen die Beiträge zu Beginn jedes Halbjahres im Januar und Juli per SEPA-Lastschrift ein. Für Vollmitglieder sind das 168 EUR pro Halbjahr.</span></p></details>
+        <details><summary><span class="l-en">Can I join for one month only?</span><span class="l-de">Kann ich nur für einen Monat Mitglied werden?</span></summary><p><span class="l-en">Yes. If you’re in Frankfurt for a short time, join as a short-term member for 40 EUR, paid up front, plus the 15 EUR admin fee. You can renew it month by month.</span><span class="l-de">Ja. Wenn du nur kurz in Frankfurt bist, wirst du Kurzzeitmitglied für 40 EUR, im Voraus zu zahlen, plus 15 EUR Aufnahmegebühr. Du kannst monatlich verlängern.</span></p></details>
+        <details><summary><span class="l-en">Is there any way to improve my game?</span><span class="l-de">Kann ich mein Spiel verbessern?</span></summary><p><span class="l-en">Yes. Coach Fuat runs a weekly coached session, usually on Wednesdays.</span><span class="l-de">Ja. Trainer Fuat leitet jede Woche ein Training, meistens mittwochs.</span></p></details>
+        <details><summary><span class="l-en">How do I cancel my membership?</span><span class="l-de">Wie kündige ich meine Mitgliedschaft?</span></summary><p><span class="l-en">Email us at least one month before the end of a half-year (30 June or 31 December). Short-term memberships end automatically after one month.</span><span class="l-de">Schreib uns mindestens einen Monat vor Ende eines Halbjahres (30. Juni oder 31. Dezember) eine E-Mail. Kurzzeitmitgliedschaften enden automatisch nach einem Monat.</span></p></details>
+        <details><summary><span class="l-en">Where do I find the latest schedule?</span><span class="l-de">Wo finde ich den aktuellen Plan?</span></summary><p><span class="l-en">On KURABU, our members’ portal. All schedule and holiday updates are published there.</span><span class="l-de">In KURABU, unserem Mitgliederportal. Dort veröffentlichen wir alle Änderungen und Ferienzeiten.</span></p></details>
+      </div>
+    </div>
+
+    <div class="trial" id="trial">
+      <div class="aside">
+        <h2><span class="l-en">Request a trial session</span><span class="l-de">Probetraining anfragen</span></h2>
+        <p><span class="l-en">Tell us about your badminton so we can suggest the right night for you. We get many requests, so we offer trial places depending on availability and reply by email.</span><span class="l-de">Erzähl uns von deinem Badminton, damit wir dir den passenden Abend vorschlagen können. Wir erhalten viele Anfragen, vergeben Probetrainings je nach Verfügbarkeit und antworten per E-Mail.</span></p>
+        <p><span class="l-en">Women players get priority for trial sessions.</span><span class="l-de">Spielerinnen bekommen bei Probetrainings Vorrang.</span></p>
+        <small><span class="l-en">Prefer email? Write to</span><span class="l-de">Lieber per E-Mail? Schreib an</span> <a class="link" href="mailto:joinabc@abc-frankfurt.de">joinabc@abc-frankfurt.de</a></small>
+      </div>
+      <form class="tf" id="trial-form" novalidate>
+        <div>
+          <label for="tf-name"><span class="l-en">Name</span><span class="l-de">Name</span></label>
+          <input id="tf-name" name="name" type="text" autocomplete="name" required>
+          <div class="err" id="tf-name-err"><span class="l-en">Enter your name.</span><span class="l-de">Gib deinen Namen ein.</span></div>
+        </div>
+        <div>
+          <label for="tf-email"><span class="l-en">Email</span><span class="l-de">E-Mail</span></label>
+          <input id="tf-email" name="email" type="email" autocomplete="email" required>
+          <div class="err" id="tf-email-err"><span class="l-en">Enter an email address like name@example.com.</span><span class="l-de">Gib eine E-Mail-Adresse wie name@beispiel.de ein.</span></div>
+        </div>
+        <div>
+          <label for="tf-level"><span class="l-en">Your level</span><span class="l-de">Dein Niveau</span></label>
+          <select id="tf-level" name="level" required>
+            <option value="" data-de="Niveau wählen">Choose your level</option>
+            <option value="Advanced or competitive" data-de="Fortgeschritten oder wettkampforientiert (Liga oder Turniere)">Advanced or competitive (league or tournament player)</option>
+            <option value="Experienced club player" data-de="Erfahrene Vereinsspielerin / erfahrener Vereinsspieler">Experienced club player</option>
+            <option value="Returning after a break" data-de="Wiedereinstieg nach einer Pause">Returning after a break</option>
+            <option value="Beginner" data-de="Anfängerin / Anfänger">Beginner</option>
+          </select>
+          <div class="err" id="tf-level-err"><span class="l-en">Choose your level.</span><span class="l-de">Wähle dein Niveau.</span></div>
+          <p class="note" id="tf-beginner" hidden><span class="l-en">Our club nights are for experienced players, so ABC probably isn’t the right fit for beginners yet. You’re still welcome to send a request.</span><span class="l-de">Unsere Vereinsabende sind für erfahrene Spielerinnen und Spieler. Für Anfänger passt ABC daher wahrscheinlich noch nicht. Du kannst uns trotzdem gern eine Anfrage schicken.</span></p>
+        </div>
+        <div>
+          <label for="tf-membership"><span class="l-en">Membership you’re interested in</span><span class="l-de">Gewünschte Mitgliedschaft</span> <span class="opt"><span class="l-en">(optional)</span><span class="l-de">(optional)</span></span></label>
+          <select id="tf-membership" name="membership">
+            <option value="" data-de="Noch nicht sicher">Not sure yet</option>
+            <option value="Full membership" data-de="Vollmitgliedschaft">Full membership</option>
+            <option value="Student membership" data-de="Mitgliedschaft für Studierende">Student membership</option>
+            <option value="Short-term, one month" data-de="Kurzzeit, ein Monat">Short-term, one month</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="tf-exp"><span class="l-en">Your badminton experience</span><span class="l-de">Deine Badminton-Erfahrung</span></label>
+          <span class="hint"><span class="l-en">How long you’ve played, clubs, leagues or tournaments.</span><span class="l-de">Wie lange du spielst, Vereine, Ligen oder Turniere.</span></span>
+          <textarea id="tf-exp" name="experience" required></textarea>
+          <div class="err" id="tf-exp-err"><span class="l-en">Tell us a little about your experience.</span><span class="l-de">Erzähl uns kurz von deiner Erfahrung.</span></div>
+        </div>
+        <fieldset class="full">
+          <legend><span class="l-en">Which nights suit you?</span><span class="l-de">Welche Abende passen dir?</span> <span class="opt"><span class="l-en">(optional)</span><span class="l-de">(optional)</span></span></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="nights" value="Monday"><span class="l-en">Monday</span><span class="l-de">Montag</span></label>
+            <label class="chip"><input type="checkbox" name="nights" value="Tuesday"><span class="l-en">Tuesday</span><span class="l-de">Dienstag</span></label>
+            <label class="chip"><input type="checkbox" name="nights" value="Wednesday"><span class="l-en">Wednesday</span><span class="l-de">Mittwoch</span></label>
+            <label class="chip"><input type="checkbox" name="nights" value="Weekend"><span class="l-en">Weekend</span><span class="l-de">Wochenende</span></label>
+          </div>
+        </fieldset>
+        <div>
+          <label for="tf-gender"><span class="l-en">Gender</span><span class="l-de">Geschlecht</span> <span class="opt"><span class="l-en">(optional)</span><span class="l-de">(optional)</span></span></label>
+          <select id="tf-gender" name="gender">
+            <option value="" data-de="Keine Angabe">Prefer not to say</option>
+            <option value="Woman" data-de="Frau">Woman</option>
+            <option value="Man" data-de="Mann">Man</option>
+            <option value="Non-binary or other" data-de="Nicht-binär oder anderes">Non-binary or other</option>
+          </select>
+        </div>
+        <div>
+          <label for="tf-phone"><span class="l-en">Phone</span><span class="l-de">Telefon</span> <span class="opt"><span class="l-en">(optional)</span><span class="l-de">(optional)</span></span></label>
+          <input id="tf-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="full">
+          <label for="tf-msg"><span class="l-en">Anything else?</span><span class="l-de">Sonst noch etwas?</span> <span class="opt"><span class="l-en">(optional)</span><span class="l-de">(optional)</span></span></label>
+          <textarea id="tf-msg" name="message" style="min-height:90px"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="tf-web">Leave this empty</label><input id="tf-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="full">
+          <label class="consent"><input id="tf-consent" name="consent" type="checkbox" required><span><span class="l-en">I agree that ABC Frankfurt stores my details to answer this request. More in our</span><span class="l-de">Ich bin einverstanden, dass ABC Frankfurt meine Angaben zur Bearbeitung dieser Anfrage speichert. Mehr dazu in unserer</span> <a class="link" href="https://abc-frankfurt.de/datenschutz/"><span class="l-en">data protection notice</span><span class="l-de">Datenschutzerklärung</span></a>.</span></label>
+          <div class="err" id="tf-consent-err"><span class="l-en">Tick this box so we can process your request.</span><span class="l-de">Bitte bestätige dies, damit wir deine Anfrage bearbeiten können.</span></div>
+        </div>
+        <button class="btn navy full" type="submit"><span class="l-en">Send request</span><span class="l-de">Anfrage senden</span></button>
+        <div class="status full" role="status" aria-live="polite" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint" id="news">
+  <div class="wrap">
+    <div class="ig-head">
+      <div>
+        <h2><span class="l-en">Latest from the club</span><span class="l-de">Neues aus dem Verein</span></h2>
+        <p><span class="l-en">Match days, tournaments and club nights from our Instagram.</span><span class="l-de">Spieltage, Turniere und Vereinsabende von unserem Instagram.</span></p>
+      </div>
+      <a class="btn navy" href="https://www.instagram.com/abcfrankfurt/"><span class="l-en">Follow @abcfrankfurt</span><span class="l-de">@abcfrankfurt folgen</span></a>
+    </div>
+    <div class="ig-grid">
+      <a class="ig-tile" href="https://www.instagram.com/p/Dct3NevI-iS/"><img src="img/instagram/Dct3NevI-iS.jpg" alt="" width="480" height="480" loading="lazy"><span class="cap"><small><span class="l-en">31 Aug 2026</span><span class="l-de">31. Aug. 2026</span></small>Bootcamp 2026</span></a>
+      <a class="ig-tile" href="https://www.instagram.com/p/Da2-wW1iIiF/"><img src="img/instagram/Da2-wW1iIiF.jpg" alt="" width="640" height="640" loading="lazy"><span class="cap"><small><span class="l-en">16 Jul 2026</span><span class="l-de">16. Juli 2026</span></small><span class="l-en">ABC Open winners, part 2</span><span class="l-de">ABC-Open-Siegerinnen und -Sieger, Teil 2</span></span></a>
+      <a class="ig-tile" href="https://www.instagram.com/reel/DZrtI8NoHSS/"><img src="img/instagram/DZrtI8NoHSS.jpg" alt="" width="361" height="640" loading="lazy"><span class="play" aria-hidden="true"></span><span class="cap"><small><span class="l-en">Reel, 17 Jun 2026</span><span class="l-de">Reel, 17. Juni 2026</span></small><span class="l-en">Highlights from the ABC Open weekend</span><span class="l-de">Highlights vom ABC-Open-Wochenende</span></span></a>
+      <a class="ig-tile" href="https://www.instagram.com/p/DZpt9iKCFpb/"><img src="img/instagram/DZpt9iKCFpb.jpg" alt="" width="640" height="640" loading="lazy"><span class="cap"><small><span class="l-en">16 Jun 2026</span><span class="l-de">16. Juni 2026</span></small><span class="l-en">ABC Open 2026 in numbers: players from 28 countries</span><span class="l-de">ABC Open 2026 in Zahlen: Aktive aus 28 Ländern</span></span></a>
+      <a class="ig-tile" href="https://www.instagram.com/p/DZdGiYlCGrN/"><img src="img/instagram/DZdGiYlCGrN.jpg" alt="" width="640" height="640" loading="lazy"><span class="cap"><small><span class="l-en">11 Jun 2026</span><span class="l-de">11. Juni 2026</span></small><span class="l-en">Meet the sponsors of ABC Open 2026</span><span class="l-de">Die Sponsoren des ABC Open 2026</span></span></a>
+      <a class="ig-tile" href="https://www.instagram.com/reel/DZA3fO8IaR_/"><img src="img/instagram/DZA3fO8IaR_.jpg" alt="" width="361" height="640" loading="lazy"><span class="play" aria-hidden="true"></span><span class="cap"><small><span class="l-en">Reel, 31 May 2026</span><span class="l-de">Reel, 31. Mai 2026</span></small><span class="l-en">Last week to sign up, places left in women’s events</span><span class="l-de">Letzte Anmeldewoche, noch Plätze in den Damenkategorien</span></span></a>
+    </div>
+    <div class="gallery" aria-label="Photo gallery" data-aria-de="Fotogalerie">
+      <img src="img/gallery/gallery-1.jpg" alt="ABC members at a tournament" data-alt-de="ABC-Mitglieder bei einem Turnier" loading="lazy">
+      <img src="img/gallery/gallery-2.jpg" alt="Players on court" data-alt-de="Spielerinnen und Spieler auf dem Feld" loading="lazy">
+      <img src="img/gallery/gallery-3.jpg" alt="Club night" data-alt-de="Vereinsabend" loading="lazy">
+      <img src="img/gallery/gallery-4.jpg" alt="Team photo" data-alt-de="Mannschaftsfoto" loading="lazy">
+      <img src="img/gallery/gallery-5.jpg" alt="Members after a match" data-alt-de="Mitglieder nach einem Spiel" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <h2><span class="l-en">Executive board</span><span class="l-de">Vorstand</span></h2>
+    <ul class="people">
+      <li><strong>Radha Malkar</strong><span><span class="l-en">President</span><span class="l-de">Vorsitz</span></span></li>
+      <li><strong>Yuchong Zheng</strong><span><span class="l-en">Sporting director</span><span class="l-de">Sportliche Leitung</span></span></li>
+      <li><strong>Zizi</strong><span><span class="l-en">Finance</span><span class="l-de">Finanzen</span></span></li>
+      <li><strong>Anant</strong><span><span class="l-en">Board member</span><span class="l-de">Vorstandsmitglied</span></span></li>
+      <li><strong>Pierre</strong><span><span class="l-en">Board member</span><span class="l-de">Vorstandsmitglied</span></span></li>
+    </ul>
+    <div class="contact">
+      <div><h3><span class="l-en">Contact</span><span class="l-de">Kontakt</span></h3><p><span class="l-en">Email is the quickest way to reach us. Members use KURABU messaging for club chat.</span><span class="l-de">Per E-Mail erreichst du uns am schnellsten. Mitglieder nutzen für den Vereinschat die Nachrichten in KURABU.</span></p></div>
+      <div><h3><span class="l-en">Email</span><span class="l-de">E-Mail</span></h3><p><span class="l-en">Joining:</span><span class="l-de">Mitmachen:</span> <a class="link" href="mailto:joinabc@abc-frankfurt.de">joinabc@abc-frankfurt.de</a><br><span class="l-en">Everything else:</span><span class="l-de">Alles andere:</span> <a class="link" href="mailto:info@abc-frankfurt.de">info@abc-frankfurt.de</a></p></div>
+      <div><h3><span class="l-en">Postal address</span><span class="l-de">Postanschrift</span></h3><p>ABC Frankfurt<br>c/o Mathias Daum<br>Im Klingenfeld 13<br>60435 Frankfurt</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2><span class="l-en">Come and play</span><span class="l-de">Komm und spiel mit</span></h2>
+    <p><span class="l-en">We get many requests, so we offer trial places depending on availability and reply by email.</span><span class="l-de">Wir erhalten viele Anfragen, vergeben Probetrainings je nach Verfügbarkeit und antworten per E-Mail.</span></p>
+    <a class="btn navy" href="#trial"><span class="l-en">Request a trial session</span><span class="l-de">Probetraining anfragen</span></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><img src="img/abc-logo.png" alt="ABC Frankfurt logo" data-alt-de="Logo ABC Frankfurt" width="72" height="72" style="margin-bottom:14px"><h3>Active Badminton Club Frankfurt e.V.</h3><p>Im Klingenfeld 13, 60435 Frankfurt<br><a href="mailto:info@abc-frankfurt.de" style="display:inline">info@abc-frankfurt.de</a></p></div>
+      <div><h3><span class="l-en">Club</span><span class="l-de">Verein</span></h3><a href="#about"><span class="l-en">About</span><span class="l-de">Über uns</span></a><a href="#times"><span class="l-en">Halls &amp; times</span><span class="l-de">Hallen &amp; Zeiten</span></a><a href="#join"><span class="l-en">Join</span><span class="l-de">Mitmachen</span></a><a href="#news"><span class="l-en">News</span><span class="l-de">Neuigkeiten</span></a></div>
+      <div><h3><span class="l-en">Follow</span><span class="l-de">Folgen</span></h3><a href="https://www.facebook.com/ABCFrankfurt">Facebook</a><a href="https://www.instagram.com/abcfrankfurt/">Instagram</a></div>
+    </div>
+    <div class="legal"><span>© ABC Frankfurt</span><a href="https://abc-frankfurt.de/datenschutz/"><span class="l-en">Data protection</span><span class="l-de">Datenschutz</span></a><a href="https://abc-frankfurt.de/impressum/">Impressum</a><a href="https://abc-frankfurt.de/club-statutes-satzung/"><span class="l-en">Club statutes</span><span class="l-de">Satzung</span></a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
