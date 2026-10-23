@@ -9,7 +9,7 @@ One-page, bilingual (EN/DE) site. Upload the whole `site` folder to the web host
 - `img/` – logo, photos, gallery, and `img/instagram/` for the Instagram tiles.
 
 ## Common updates
-- **Trial form:** set `FORM_ENDPOINT` near the top of the form section in `script.js` (e.g. your Formspree link). While empty, the form opens the visitor's email app.
+- **Trial form:** sends to Formspree (`https://formspree.io/f/mjyyvnnv`). The address is set in two places: `FORM_ENDPOINT` in `script.js` and the form's `action` in `index.html` (used only if JavaScript is off). Change both if you ever switch forms. The hidden `_gotcha` field is Formspree's spam trap; leave it empty and hidden.
 - **ABC Open dates:** change `data-start` / `data-end` on `#open-count` in `index.html`, plus the two date lines under it.
 - **Winter/summer switch dates:** `abcSeason()` in `script.js` (currently April–September = summer).
 - **Playing times:** edit the `<li>` rows in the schedule. `data-when` = all/winter/summer, `data-days` = weekday numbers (0 = Sunday … 6 = Saturday). "Tonight at ABC" reads these rows automatically.
