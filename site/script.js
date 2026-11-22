@@ -113,7 +113,7 @@ document.querySelectorAll(".courts[data-courts]").forEach(function(el){
 (function(){
   // Formspree form that receives trial requests (submissions arrive in the Formspree inbox and by email).
   // If this is ever emptied, the form falls back to opening the visitor's email app with the answers filled in.
-  var FORM_ENDPOINT="https://formspree.io/f/mjyyvnnv";
+  var FORM_ENDPOINT="https://formspree.io/f/mbgopjgr";
   var JOIN_EMAIL="joinabc@abc-frankfurt.de";
 
   var f=document.getElementById("trial-form"); if(!f) return;
