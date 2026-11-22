@@ -314,6 +314,14 @@ footer{background:var(--navy);color:#fff;padding:60px 0 28px;font-size:15px}
 .legal-foot{margin-top:0!important;padding-top:0!important;border-top:0!important}
 @media (max-width:640px){.legal-page .brand-txt b{font-size:19px}.back{min-height:38px;padding:7px 14px;font-size:14px}}
 
+/* ---------- ABC Open: trophies photo under a navy band ---------- */
+.open{background:var(--navy);min-height:880px;padding:clamp(64px,8vw,104px) 0;isolation:isolate}
+.open .open-bg{position:absolute;left:0;right:0;bottom:0;width:100%;height:72%;object-fit:cover;object-position:50% 62%;z-index:-2}
+.open::before{content:"";position:absolute;left:0;right:0;bottom:0;height:72%;z-index:-1;background:linear-gradient(180deg,var(--navy) 0%,rgba(15,35,64,.55) 18%,rgba(15,35,64,0) 40%,rgba(15,35,64,0) 75%,rgba(15,35,64,.6) 100%)}
+.open-in{align-items:start}
+.open .cd-line b{color:var(--pop-hi)}
+@media (max-width:1000px){.open{min-height:760px}.open .open-bg,.open::before{height:52%}.open .open-bg{object-position:50% 70%}.open-in{gap:18px}}
+
 /* ---------- Language switch ---------- */
 html[data-lang="de"] .l-en,html[data-lang="en"] .l-de{display:none!important}
 
