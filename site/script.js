@@ -111,22 +111,25 @@ document.querySelectorAll(".courts[data-courts]").forEach(function(el){
 
 /* ---------- Trial request form ---------- */
 (function(){
-  // Paste your form service address here, e.g. "https://formspree.io/f/abcdwxyz".
-  // While it is empty, the form opens the visitor's email app with the answers filled in.
-  var FORM_ENDPOINT="";
+  // Formspree form that receives trial requests (submissions arrive in the Formspree inbox and by email).
+  // If this is ever emptied, the form falls back to opening the visitor's email app with the answers filled in.
+  var FORM_ENDPOINT="https://formspree.io/f/mjyyvnnv";
   var JOIN_EMAIL="joinabc@abc-frankfurt.de";
 
   var f=document.getElementById("trial-form"); if(!f) return;
+  f.noValidate=true; // our own checks replace the browser's; without JavaScript the browser's checks still apply
   var E=f.elements, status=f.querySelector(".status");
   var T={
     en:{fix:"Some answers need fixing before you can send.",sending:"Sending…",send:"Send request",
         fail:"Your request wasn’t sent. Check your connection and try again, or email "+JOIN_EMAIL+".",
+        badEmail:"We couldn’t accept that email address. Check it and send again.",
         mail:"Your email app should now open with your request filled in. Press send there to finish.",
-        sentH:"Request sent",sent:function(e){return "Thanks. We’ll reply by email to "+e+" once we can offer you a trial place.";}},
+        sentH:"Request sent",sent:function(e){return "Thanks. We usually reply within a day, by email to "+e+".";}},
     de:{fix:"Bitte korrigiere die markierten Angaben, bevor du sendest.",sending:"Wird gesendet…",send:"Anfrage senden",
         fail:"Deine Anfrage wurde nicht gesendet. Prüfe deine Verbindung und versuche es erneut, oder schreib an "+JOIN_EMAIL+".",
+        badEmail:"Diese E-Mail-Adresse konnten wir nicht annehmen. Prüfe sie und sende noch einmal.",
         mail:"Dein E-Mail-Programm sollte sich jetzt mit deiner Anfrage öffnen. Drück dort auf Senden, um sie abzuschicken.",
-        sentH:"Anfrage gesendet",sent:function(e){return "Danke. Wir antworten per E-Mail an "+e+", sobald wir dir ein Probetraining anbieten können.";}}
+        sentH:"Anfrage gesendet",sent:function(e){return "Danke. Wir antworten meist innerhalb eines Tages per E-Mail an "+e+".";}}
   };
   var t=function(){return T[ABC.lang()];};
   var level=E.level, note=document.getElementById("tf-beginner");
@@ -160,7 +163,7 @@ document.querySelectorAll(".courts[data-courts]").forEach(function(el){
     e.preventDefault();
     var bad=checks.filter(function(c){return !check(c[0],c[1]);});
     if(bad.length){ say("bad","fix"); document.getElementById(bad[0][0]).focus(); return; }
-    if(E.website.value){ done(); return; } // a spam bot filled the hidden field
+    if(E._gotcha.value){ done(); return; } // a spam bot filled the hidden field (Formspree also rejects these)
 
     var nights=[].map.call(f.querySelectorAll("[name=nights]:checked"),function(x){return x.value;}).join(", ");
     var data={name:E.name.value.trim(),email:E.email.value.trim(),level:E.level.value,membership:E.membership.value||"Not sure yet",
@@ -169,10 +172,38 @@ document.querySelectorAll(".courts[data-courts]").forEach(function(el){
 
     if(FORM_ENDPOINT){
       var btn=f.querySelector("[type=submit]"); btn.disabled=true; btn.textContent=t().sending;
+      // The email that arrives at joinabc@ lists these fields in this order, under these names.
+      // "Summary" is a one-paragraph overview so the request can be judged at a glance.
+      var summary=data.name+" ("+(data.gender==="Not given"?"gender not given":data.gender.toLowerCase())+") asks for a trial session. "+
+        "Level: "+data.level+". Membership: "+data.membership+". Nights: "+data.nights+". "+
+        "Wrote in "+data.language+". Reply to "+data.email+(data.phone!=="Not given"?" or call "+data.phone:"")+".";
+      var payload={
+        _subject:"Trial request: "+data.name+" ("+data.level+")",
+        _replyto:data.email,
+        "Summary":summary,
+        "Name":data.name,
+        "email":data.email,
+        "Phone":data.phone,
+        "Level":data.level,
+        "Experience":data.experience,
+        "Preferred nights":data.nights,
+        "Membership interest":data.membership,
+        "Gender":data.gender,
+        "Message":data.message||"-",
+        "Site language":data.language
+      };
       fetch(FORM_ENDPOINT,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},
-        body:JSON.stringify(Object.assign({_subject:"Trial session request: "+data.name,_replyto:data.email},data))})
-      .then(function(r){ if(!r.ok) throw 0; done(); })
-      .catch(function(){ btn.disabled=false; btn.textContent=t().send; say("bad","fail"); });
+        body:JSON.stringify(payload)})
+      .then(function(r){
+        if(r.ok){ done(); return; }
+        // Formspree answers rejected submissions with {errors:[{field,code,message}]}
+        return r.json().catch(function(){return {};}).then(function(res){
+          var emailErr=(res.errors||[]).some(function(x){return x.field==="email";});
+          if(emailErr){ check("tf-email",function(){return false;}); E.email.focus(); }
+          throw emailErr?"badEmail":"fail";
+        });
+      })
+      .catch(function(key){ btn.disabled=false; btn.textContent=t().send; say("bad",key==="badEmail"?"badEmail":"fail"); });
     }else{
       var body=["Name: "+data.name,"Email: "+data.email,"Phone: "+data.phone,"Level: "+data.level,"Membership: "+data.membership,
         "Nights: "+data.nights,"Gender: "+data.gender,"Language: "+data.language,"","Experience:",data.experience,"","Message:",data.message||"-"].join("\n");
@@ -186,6 +217,30 @@ document.querySelectorAll(".courts[data-courts]").forEach(function(el){
     h.textContent=t().sentH; p.textContent=t().sent(E.email.value.trim());
     d.appendChild(h); d.appendChild(p); f.replaceWith(d); d.focus();
   }
+})();
+
+/* ---------- Header: solid background after scrolling, highlight the current section ---------- */
+(function(){
+  var top=document.querySelector(".top"); if(!top) return;
+  var hero=document.querySelector(".hero");
+  function solid(){ top.classList.toggle("solid", window.scrollY > (hero ? hero.offsetHeight - top.offsetHeight - 20 : 40)); }
+  window.addEventListener("scroll",solid,{passive:true}); window.addEventListener("resize",solid); solid();
+
+  var links=[].slice.call(document.querySelectorAll(".menu a[href^='#']"));
+  if(!("IntersectionObserver" in window)||!links.length) return;
+  var byId={}; links.forEach(function(a){ byId[a.getAttribute("href").slice(1)]=a; });
+  var current=null;
+  function mark(id){
+    if(id===current) return; current=id;
+    links.forEach(function(a){ if(byId[id]===a){ a.setAttribute("aria-current","true"); } else { a.removeAttribute("aria-current"); } });
+    var a=byId[id], menu=a&&a.parentNode;
+    if(a&&menu.scrollWidth>menu.clientWidth){ menu.scrollTo({left:a.offsetLeft-menu.clientWidth/2+a.offsetWidth/2,behavior:"smooth"}); }
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) mark(e.target.id); });
+  },{rootMargin:"-45% 0px -50% 0px"});
+  Object.keys(byId).forEach(function(id){ var s=document.getElementById(id); if(s) io.observe(s); });
+  if(hero) new IntersectionObserver(function(e){ if(e[0].isIntersecting) mark(null); },{rootMargin:"-45% 0px -50% 0px"}).observe(hero);
 })();
 
 ABC.init();

@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/datenschutzerklaerung", "destination": "/datenschutz", "permanent": true },
+    { "source": "/club-statutes-satzung", "destination": "/satzung", "permanent": true },
+    { "source": "/about-us", "destination": "/#about", "permanent": true },
+    { "source": "/halls-and-times", "destination": "/#times", "permanent": true },
+    { "source": "/join-abc", "destination": "/#join", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/news", "destination": "/#news", "permanent": true },
+    { "source": "/abc-news", "destination": "/#news", "permanent": true },
+    { "source": "/abc-open-2023-photos", "destination": "/#news", "permanent": true },
+    { "source": "/schleifchenturnier-2022", "destination": "/#news", "permanent": true },
+    { "source": "/homepage", "destination": "/", "permanent": true },
+    { "source": "/members-only", "destination": "https://abc-frankfurt.kurabu.com/", "permanent": false },
+    { "source": "/members-photo-gallery", "destination": "https://abc-frankfurt.kurabu.com/", "permanent": false },
+    { "source": "/members-meeting", "destination": "https://abc-frankfurt.kurabu.com/", "permanent": false },
+    { "source": "/wp-admin/:path*", "destination": "/", "permanent": false },
+    { "source": "/wp-login.php", "destination": "/", "permanent": false }
+  ]
+}
