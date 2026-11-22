@@ -322,6 +322,35 @@ footer{background:var(--navy);color:#fff;padding:60px 0 28px;font-size:15px}
 .open .cd-line b{color:var(--pop-hi)}
 @media (max-width:1000px){.open{min-height:760px}.open .open-bg,.open::before{height:52%}.open .open-bg{object-position:50% 70%}.open-in{gap:18px}}
 
+/* ---------- Club photos (2026 set) ---------- */
+/* Halls & times: the hall photo fades into the navy board */
+.board{position:relative;overflow:hidden;isolation:isolate}
+.board-bg{position:absolute;left:0;right:0;top:0;width:100%;height:600px;object-fit:cover;object-position:50% 55%;z-index:-2;opacity:.55}
+.board::before{content:"";position:absolute;left:0;right:0;top:0;height:600px;z-index:-1;background:linear-gradient(180deg,rgba(15,35,64,.45) 0%,rgba(15,35,64,.8) 55%,var(--navy) 100%)}
+/* Teams: one wide match photo */
+.team-photo{margin:0 0 28px;overflow:hidden;border-radius:6px;aspect-ratio:21/9;background:var(--mist)}
+.team-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+/* Training: the smash under the intro */
+.train-pic{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:60% 40%;border-radius:6px;margin-top:28px}
+/* Join: overhead shot above "Is ABC right for you?" */
+.join-side{display:flex;flex-direction:column;gap:16px;min-width:0}
+.join-pic{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 28%;border-radius:8px}
+/* Closing call to action on the shuttle-on-black photo */
+.final{position:relative;overflow:hidden;isolation:isolate;background:#000;color:#fff;text-align:left;padding:clamp(96px,12vw,168px) 0}
+.final-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 50%;z-index:-2}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.7) 62%)}
+.final .wrap{display:flex;flex-direction:column;align-items:flex-start;padding-left:max(var(--gut),50%)}
+.final h2{color:#fff}
+.final p{margin:0 0 28px;color:#D7DEE8;max-width:40ch}
+.final .btn.navy{background:var(--pop);color:var(--navy)}.final .btn.navy:hover{background:var(--pop-hi)}
+@media (max-width:760px){
+  .team-photo{aspect-ratio:16/10}
+  .final{padding:300px 0 64px}
+  .final-bg{object-position:22% 30%}
+  .final::before{background:linear-gradient(180deg,rgba(0,0,0,0) 20%,rgba(0,0,0,.85) 62%)}
+  .final .wrap{padding-left:var(--gut)}
+}
+
 /* ---------- Language switch ---------- */
 html[data-lang="de"] .l-en,html[data-lang="en"] .l-de{display:none!important}
 
